@@ -39,7 +39,7 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/cinema-app/">
       <Navbar />
       <main className="main-content">
         <AnimatedRoutes />
