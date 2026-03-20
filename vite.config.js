@@ -7,5 +7,8 @@ export default defineConfig({
   base: '/cinema-app/',
   build: {
     outDir: 'docs'
+  },
+  server: {
+    historyApiFallback: true
   }
 })
