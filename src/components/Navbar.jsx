@@ -28,6 +28,17 @@ useEffect(() => {
   const closeMenu = () => setMenuOpen(false)
   closeMenu()
 }, [location.pathname])
+
+useEffect(() => {
+  const handleClickOutside = (e) => {
+    if (menuOpen && !e.target.closest('.mobile-nav') && !e.target.closest('.mobile-menu-btn')) {
+      setMenuOpen(false)
+    }
+  }
+  
+  document.addEventListener('mousedown', handleClickOutside)
+  return () => document.removeEventListener('mousedown', handleClickOutside)
+}, [menuOpen])
     
   const handleSearch = (e) => {
     e.preventDefault()
@@ -82,6 +93,25 @@ useEffect(() => {
       </div>
 
       <div className={`mobile-nav ${menuOpen ? 'mobile-nav--open' : ''}`}>
+        <form className="mobile-nav-search" onSubmit={handleSearch}>
+          <input
+            type="text"
+            className="mobile-nav-search-input"
+            placeholder="Search films..."
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+          />
+          <button type="submit" className="mobile-nav-search-btn">Search</button>
+        </form>
+        
+        <button
+          className="mobile-nav-close"
+          onClick={() => setMenuOpen(false)}
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+        
         {NAV_LINKS.map(link => (
           <Link
             key={link.label}

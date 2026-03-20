@@ -264,6 +264,65 @@ a:hover {
   right: 0;
 }
 
+.mobile-nav-search {
+  display: flex;
+  align-items: center;
+  background: var(--surface-light);
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.mobile-nav-search-input {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  flex: 1;
+  outline: none;
+}
+
+.mobile-nav-search-btn {
+  background: var(--accent);
+  border: none;
+  color: var(--bg);
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.mobile-nav-search-btn:hover {
+  background: var(--text);
+}
+
+.mobile-nav-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--surface-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav-close:hover {
+  background: var(--surface);
+  color: var(--accent);
+}
+
 .mobile-nav-link {
   display: block;
   font-family: var(--font-display);
