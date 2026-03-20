@@ -1478,8 +1478,12 @@ a:hover {
     border-radius: 8px 8px 0 0;
   }
   
+  .movie-poster-img {
+    border-radius: 8px 8px 0 0;
+  }
+  
   .movie-info {
-    padding: 0.5rem;
+    padding: 0.75rem;
   }
   
   .movie-title {
@@ -1488,11 +1492,14 @@ a:hover {
   }
   
   .movie-year {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
   
   .movie-rating {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    top: 0.6rem;
+    right: 0.6rem;
+    padding: 0.25rem 0.4rem;
   }
   
   .section {
