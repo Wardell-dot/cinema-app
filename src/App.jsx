@@ -7,7 +7,6 @@ import Search from './pages/Search'
 import MovieDetail from './pages/MovieDetail'
 import Genre from './pages/Genre'
 import Watchlist from './pages/Watchlist'
-import './index.css'
 
 function PageWrapper({ children }) {
   return (

@@ -52,14 +52,19 @@ body::before {
   opacity: 0.03;
   z-index: 1;
   pointer-events: none;
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 80%, rgba(245, 166, 35, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(8, 145, 178, 0.1) 0%, transparent 50%);
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.2;
@@ -91,6 +96,7 @@ a:hover {
   z-index: 1000;
   padding: 1rem 2rem;
   background: rgba(10, 10, 10, 0.8);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: var(--transition);
@@ -98,6 +104,7 @@ a:hover {
 
 .navbar--scrolled {
   background: rgba(10, 10, 10, 0.95);
+  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
 }
 
@@ -254,6 +261,7 @@ a:hover {
   max-width: 400px;
   height: 100vh;
   background: var(--surface);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   padding: 2rem;
   transition: right 0.3s ease;
@@ -369,7 +377,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.9) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
   z-index: 2;
 }
 
@@ -542,7 +550,6 @@ a:hover {
   object-position: center;
   transition: var(--transition);
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
   background: var(--surface);
 }
 
@@ -579,7 +586,7 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
   padding: 1rem;
   opacity: 0;
   transition: var(--transition);
@@ -654,8 +661,13 @@ a:hover {
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* Genre Page Styles */
@@ -811,7 +823,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.9) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
 .detail-content {
@@ -1203,7 +1215,9 @@ a:hover {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .error {
@@ -1244,7 +1258,7 @@ a:hover {
   .movies-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
-  
+
   .detail-content {
     max-width: 100%;
     padding: 3rem 1.5rem 2rem;
@@ -1255,60 +1269,60 @@ a:hover {
   .navbar {
     padding: 1rem;
   }
-  
+
   .navbar-inner {
     gap: 1rem;
   }
-  
+
   .navbar-logo {
     font-size: 1.25rem;
   }
-  
+
   .navbar-search {
     display: none;
   }
-  
+
   .navbar-nav {
     display: none;
   }
-  
+
   .mobile-menu-btn {
     display: block;
   }
-  
+
   .mobile-nav {
     display: block;
     padding: 1.5rem;
   }
-  
+
   .mobile-nav-link {
     font-size: 1.1rem;
     padding: 1rem 0;
   }
-  
+
   .hero-title {
     font-size: clamp(1.75rem, 8vw, 2.5rem);
     line-height: 1.2;
   }
-  
+
   .hero-eyebrow {
     font-size: 0.8rem;
   }
-  
+
   .hero-overview {
     font-size: 1rem;
   }
-  
+
   .hero-meta {
     gap: 1rem;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .home-main {
     padding: 1.5rem 1rem;
   }
-  
+
   .category-tabs {
     gap: 0.5rem;
     margin-bottom: 1.5rem;
@@ -1316,52 +1330,52 @@ a:hover {
     flex-wrap: nowrap;
     padding-bottom: 0.5rem;
   }
-  
+
   .category-tab {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
     white-space: nowrap;
     flex-shrink: 0;
   }
-  
+
   .movies-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 0.75rem;
   }
-  
+
   .movie-card {
     border-radius: 12px;
   }
-  
+
   .movie-poster {
     border-radius: 12px 12px 0 0;
   }
-  
+
   .movie-title {
     font-size: 0.85rem;
     padding: 0.5rem;
   }
-  
+
   .section {
     padding: 2rem 1rem;
   }
-  
+
   .section-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-  
+
   .section-title {
     font-size: 1.75rem;
   }
-  
+
   .genre-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .genre-sort {
     width: 100%;
     justify-content: flex-start;
@@ -1369,83 +1383,83 @@ a:hover {
     flex-wrap: nowrap;
     padding-bottom: 0.5rem;
   }
-  
+
   .sort-btn {
     padding: 0.5rem 0.75rem;
     font-size: 0.8rem;
     white-space: nowrap;
     flex-shrink: 0;
   }
-  
+
   .detail-backdrop {
     height: 40vh;
   }
-  
+
   .detail-content {
     padding: 2rem 1rem 1rem;
     gap: 1.5rem;
   }
-  
+
   .detail-back {
     top: 1rem;
     left: 1rem;
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
-  
+
   .detail-poster-wrap {
     max-width: 250px;
     margin: 0 auto 1.5rem;
   }
-  
+
   .detail-title {
     font-size: 1.75rem;
     line-height: 1.2;
   }
-  
+
   .detail-tagline {
     font-size: 1rem;
   }
-  
+
   .detail-overview {
     font-size: 1rem;
     line-height: 1.6;
   }
-  
+
   .detail-meta {
     gap: 0.75rem;
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+
   .detail-genres {
     justify-content: center;
     gap: 0.5rem;
   }
-  
+
   .detail-genre {
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
   }
-  
+
   .detail-credits {
     text-align: left;
   }
-  
+
   .credit-label {
     font-size: 0.8rem;
   }
-  
+
   .credit-value {
     font-size: 0.9rem;
   }
-  
+
   .detail-actions {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
   }
-  
+
   .detail-trailer-btn,
   .detail-watchlist-btn {
     width: 100%;
@@ -1453,22 +1467,22 @@ a:hover {
     padding: 0.75rem 1rem;
     font-size: 0.9rem;
   }
-  
+
   .similar-section {
     padding: 0 1rem;
     margin-top: 2rem;
   }
-  
+
   .similar-title {
     font-size: 1.5rem;
     text-align: center;
   }
-  
+
   .trailer-modal-inner {
     width: 95%;
     margin: 1rem;
   }
-  
+
   .trailer-close {
     width: 35px;
     height: 35px;
@@ -1480,35 +1494,35 @@ a:hover {
   .navbar {
     padding: 0.75rem 1rem;
   }
-  
+
   .navbar-inner {
     gap: 0.75rem;
   }
-  
+
   .navbar-logo {
     font-size: 1.1rem;
   }
-  
+
   .hero {
     padding: 5rem 1rem 2rem;
   }
-  
+
   .hero-title {
     font-size: clamp(1.5rem, 10vw, 2rem);
   }
-  
+
   .hero-eyebrow {
     font-size: 0.75rem;
   }
-  
+
   .hero-overview {
     font-size: 0.95rem;
   }
-  
+
   .home-main {
     padding: 1rem 0.75rem;
   }
-  
+
   .category-tabs {
     gap: 0.25rem;
     margin-bottom: 1rem;
@@ -1516,227 +1530,227 @@ a:hover {
     flex-wrap: nowrap;
     padding-bottom: 0.5rem;
   }
-  
+
   .category-tab {
     padding: 0.4rem 0.75rem;
     font-size: 0.8rem;
     white-space: nowrap;
     flex-shrink: 0;
   }
-  
+
   .movies-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 0.5rem;
   }
-  
+
   .movie-card {
     border-radius: 8px;
   }
-  
+
   .movie-poster {
     border-radius: 8px 8px 0 0;
   }
-  
+
   .movie-poster-img {
     border-radius: 8px 8px 0 0;
   }
-  
+
   .movie-info {
     padding: 0.75rem;
   }
-  
+
   .movie-title {
     font-size: 0.75rem;
     padding: 0.4rem;
   }
-  
+
   .movie-year {
     font-size: 0.65rem;
   }
-  
+
   .movie-rating {
     font-size: 0.65rem;
     top: 0.6rem;
     right: 0.6rem;
     padding: 0.25rem 0.4rem;
   }
-  
+
   .section {
     padding: 1.5rem 0.75rem;
   }
-  
+
   .section-title {
     font-size: 1.5rem;
   }
-  
+
   .genre-main {
     padding: 1.5rem 0.75rem;
   }
-  
+
   .genre-header {
     gap: 0.75rem;
   }
-  
+
   .genre-sort {
     gap: 0.25rem;
   }
-  
+
   .sort-btn {
     padding: 0.4rem 0.6rem;
     font-size: 0.75rem;
   }
-  
+
   .detail-backdrop {
     height: 35vh;
   }
-  
+
   .detail-content {
     padding: 1.5rem 0.75rem 0.75rem;
     gap: 1rem;
   }
-  
+
   .detail-back {
     top: 0.75rem;
     left: 0.75rem;
     padding: 0.4rem 0.75rem;
     font-size: 0.8rem;
   }
-  
+
   .detail-poster-wrap {
     max-width: 200px;
     margin: 0 auto 1rem;
   }
-  
+
   .detail-title {
     font-size: 1.5rem;
   }
-  
+
   .detail-tagline {
     font-size: 0.95rem;
   }
-  
+
   .detail-overview {
     font-size: 0.95rem;
   }
-  
+
   .detail-meta {
     gap: 0.5rem;
   }
-  
+
   .detail-genre {
     font-size: 0.7rem;
     padding: 0.2rem 0.4rem;
   }
-  
+
   .watchlist-hero {
     padding: 4rem 1rem 1rem;
   }
-  
+
   .watchlist-eyebrow {
     font-size: 0.8rem;
   }
-  
+
   .watchlist-title {
     font-size: 1.75rem;
   }
-  
+
   .watchlist-count {
     font-size: 0.75rem;
     padding: 0.2rem 0.6rem;
     margin-left: 0.5rem;
   }
-  
+
   .watchlist-content {
     padding: 1rem;
   }
-  
+
   .watchlist-empty {
     padding: 4rem 1rem;
   }
-  
+
   .watchlist-empty p {
     font-size: 1rem;
   }
-  
+
   .watchlist-browse-btn {
     padding: 0.6rem 1.25rem;
     font-size: 0.85rem;
   }
-  
+
   .watchlist-item .movie-poster {
     max-height: 250px;
   }
-  
+
   .watchlist-item .movie-info {
     padding: 0.75rem 1rem;
   }
-  
+
   .watchlist-item .movie-title {
     font-size: 0.8rem;
     padding: 0.4rem;
   }
-  
+
   .watchlist-item .movie-year {
     font-size: 0.7rem;
     margin-top: 0.5rem;
   }
-  
+
   .detail-trailer-btn,
   .detail-watchlist-btn {
     max-width: 200px;
     padding: 0.6rem 0.8rem;
     font-size: 0.85rem;
   }
-  
+
   .similar-section {
     padding: 0 0.75rem;
     margin-top: 1.5rem;
   }
-  
+
   .similar-title {
     font-size: 1.25rem;
   }
-  
+
   .trailer-modal-inner {
     width: 98%;
     margin: 0.5rem;
   }
-  
+
   .watchlist-hero {
     padding: 3rem 0.75rem 0.75rem;
   }
-  
+
   .watchlist-eyebrow {
     font-size: 0.75rem;
   }
-  
+
   .watchlist-title {
     font-size: 1.5rem;
   }
-  
+
   .watchlist-count {
     font-size: 0.7rem;
     padding: 0.15rem 0.5rem;
     margin-left: 0.25rem;
   }
-  
+
   .watchlist-content {
     padding: 0.75rem;
   }
-  
+
   .watchlist-empty {
     padding: 3rem 0.75rem;
   }
-  
+
   .watchlist-empty p {
     font-size: 0.95rem;
   }
-  
+
   .watchlist-browse-btn {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
-  
+
   .watchlist-remove-btn {
     width: 24px;
     height: 24px;
@@ -1744,7 +1758,7 @@ a:hover {
     top: 0.3rem;
     right: 0.3rem;
   }
-  
+
   .trailer-close {
     width: 30px;
     height: 30px;
